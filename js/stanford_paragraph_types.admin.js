@@ -36,19 +36,6 @@
         });
       });
 
-      $('.field-name-field-p-featured-style', context).each(function () {
-        $style = $(this);
-
-        $(this).find('.form-radio').each(function () {
-          if ($(this).is(':checked')) {
-            featuredStyle($style, $(this).val());
-          }
-          $(this).change(function () {
-            featuredStyle($style, $(this).val());
-          });
-        });
-      });
-
       // Used this method vs conditional_fields since the contrib module failed
       // to function correctly after a 2nd item was added.
       function teaserCardsCTA(group, radioVal) {
@@ -70,20 +57,6 @@
         else if (radioVal == 'video') {
           $style.siblings('.field-name-field-p-hero-image').hide();
           $style.siblings('.field-name-field-p-hero-video').show();
-        }
-        else {
-          $style.siblings().show();
-        }
-      }
-
-      function featuredStyle($style, radioVal) {
-        if (radioVal == 'image') {
-          $style.siblings('.field-name-field-p-featured-image').show();
-          $style.siblings('.field-name-field-p-featured-video').hide();
-        }
-        else if (radioVal == 'video') {
-          $style.siblings('.field-name-field-p-featured-image').hide();
-          $style.siblings('.field-name-field-p-featured-video').show();
         }
         else {
           $style.siblings().show();

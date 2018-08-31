@@ -84,7 +84,6 @@ module.exports = function(grunt) {
           'css/stanford_paragraph_types.p_callout.css': 'scss/stanford_paragraph_types.p_callout.scss',
           'css/stanford_paragraph_types.p_cards.css': 'scss/stanford_paragraph_types.p_cards.scss',
           'css/stanford_paragraph_types.p_hero.css': 'scss/stanford_paragraph_types.p_hero.scss',
-          'css/stanford_paragraph_types.p_featured.css': 'scss/stanford_paragraph_types.p_featured.scss',
           'css/stanford_paragraph_types.p_icon.css': 'scss/stanford_paragraph_types.p_icon.scss',
           'css/stanford_paragraph_types.p_menu.css': 'scss/stanford_paragraph_types.p_menu.scss',
           'css/stanford_paragraph_types.p_section_header.css': 'scss/stanford_paragraph_types.p_section_header.scss',
