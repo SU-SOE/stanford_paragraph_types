@@ -78,7 +78,6 @@
 
       function featuredStyle($style, radioVal) {
         if (radioVal == 'image') {
-          alert('foo');
           $style.siblings('.field-name-field-p-featured-image').show();
           $style.siblings('.field-name-field-p-featured-video').hide();
         }

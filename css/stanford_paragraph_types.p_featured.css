@@ -1,0 +1,99 @@
+.paragraphs-item-p-featured > .content {
+  position: relative;
+}
+
+.paragraphs-item-p-featured > .content .player {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.paragraphs-item-p-featured > .content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.paragraphs-item-p-featured > .content .field-name-field-p-featured-image {
+  position: relative;
+}
+
+.paragraphs-item-p-featured > .content .field-name-field-p-featured-image img {
+  width: 100%;
+}
+
+.paragraphs-item-p-featured .group-overlay-text {
+  position: absolute;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.paragraphs-item-p-featured .group-overlay-text .field.field-name-field-p-featured-headline,
+.paragraphs-item-p-featured .group-overlay-text .field.field-name-field-p-featured-superhead {
+  margin-bottom: 0;
+}
+
+.paragraphs-item-p-featured .group-overlay-text .field-name-field-p-featured-superhead {
+  font-size: 2.4em;
+  font-weight: 400;
+  letter-spacing: -.5px;
+  line-height: 1.2em;
+}
+
+.paragraphs-item-p-featured.overlay-top .group-overlay-text {
+  top: 20px;
+}
+
+.paragraphs-item-p-featured.overlay-bottom .group-overlay-text {
+  bottom: 20px;
+}
+
+.paragraphs-item-p-featured.overlay-left .group-overlay-text {
+  left: 20px;
+}
+
+.paragraphs-item-p-featured.overlay-right .group-overlay-text {
+  right: 20px;
+}
+
+.paragraphs-item-p-featured a.play-video {
+  display: block;
+  position: absolute;
+  font-size: 0;
+  left: calc(50% - 70px);
+  top: calc(50% - 70px);
+  color: #fff;
+}
+
+.paragraphs-item-p-featured a.play-video:focus, .paragraphs-item-p-featured a.play-video:hover {
+  color: #b6b1a9;
+  text-decoration: none;
+}
+
+.paragraphs-item-p-featured a.play-video i:before {
+  font-size: 140px;
+}
+
+.paragraphs-item-p-featured .field-name-field-p-featured-video:nth-child(2) {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .paragraphs-item-p-featured .group-overlay-text {
+    position: static;
+  }
+}
+
+.style-custom-styles-dark .paragraphs-item-p-featured .group-overlay-text {
+  background: #2e2d29;
+}
+
+@media (max-width: 1169px) {
+  .paragraphs-item-p-featured.entity-paragraphs-item {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

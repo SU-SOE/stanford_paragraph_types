@@ -18,7 +18,7 @@
             href: videoUrl,
             html: $('<i>', {
               class: 'fa fa-youtube-play icon-youtube-play',
-              html: 'Play Video',
+              html: '',
               'aria-label': Drupal.t('Play Video - Opens to the video website')
             })
           }).click(function (e) {
