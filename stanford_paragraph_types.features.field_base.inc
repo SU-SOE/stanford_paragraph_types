@@ -778,6 +778,32 @@ function stanford_paragraph_types_field_default_field_bases() {
     'type' => 'fontawesome_icon',
   );
 
+  // Exported field_base: 'field_p_icon_icon_style'.
+  $field_bases['field_p_icon_icon_style'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_p_icon_icon_style',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'icon' => 'FontAwesome Icon',
+        'image' => 'Image File',
+        'text' => 'Text/Number',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_p_icon_image'.
   $field_bases['field_p_icon_image'] = array(
     'active' => 1,
@@ -829,6 +855,27 @@ function stanford_paragraph_types_field_default_field_bases() {
     'type' => 'link_field',
   );
 
+  // Exported field_base: 'field_p_icon_text'.
+  $field_bases['field_p_icon_text'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_p_icon_text',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'max_length' => 5,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
   // Exported field_base: 'field_p_icon_title'.
   $field_bases['field_p_icon_title'] = array(
     'active' => 1,
@@ -848,6 +895,34 @@ function stanford_paragraph_types_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_p_icons_per_row'.
+  $field_bases['field_p_icons_per_row'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_p_icons_per_row',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        1 => 1,
+        2 => 2,
+        3 => 3,
+        4 => 4,
+        6 => 6,
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_integer',
   );
 
   // Exported field_base: 'field_p_menu_file_insert'.
