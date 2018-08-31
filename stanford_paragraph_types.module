@@ -183,6 +183,24 @@ function _stanford_paragraph_types_preprocess_entity_paragraphs_item(&$vars) {
 
       break;
 
+    case 'p_featured':
+      // Adds class to tell where the overlay should live.
+      $classes = explode(' ', $entity->field_p_featured_alignment[LANGUAGE_NONE][0]['value']);
+      foreach ($classes as $class) {
+        $vars['classes_array'][] = $class;
+      }
+
+      // If the style is not "both" unset the unwanted field.
+      $style = $entity->field_p_featured_style[LANGUAGE_NONE][0]['value'];
+      if ($style == 'image') {
+        unset($vars['content']['field_p_featured_video']);
+      }
+      elseif ($style == 'video') {
+        unset($vars['content']['field_p_featured_image']);
+      }
+
+      break;
+
     case 'p_callout':
       $color_items = field_get_items('paragraphs_item', $vars['paragraphs_item'], 'field_p_callout_color');
       if ($color_items) {
@@ -540,6 +558,33 @@ function _stanford_paragraph_types_field_attach_validate_p_hero($entity_type, $e
 
   if (($style == 'video' || $style == 'both') && (!$videos || !array_filter($videos[0]))) {
     $errors['field_p_hero_video'][LANGUAGE_NONE][0][] = [
+      'error' => 'field_example_invalid',
+      'message' => t('Video Required.'),
+    ];
+  }
+}
+
+/**
+ * Helper for stanford_paragraph_types_field_attach_validate().
+ *
+ * If the featured is set to display only the image or only the video, validate
+ * that the appropriate field is populated.
+ */
+function _stanford_paragraph_types_field_attach_validate_p_featured($entity_type, $entity, &$errors) {
+
+  $style = $entity->field_p_featured_style[LANGUAGE_NONE][0]['value'];
+  $images = field_get_items($entity_type, $entity, 'field_p_featured_image');
+  $videos = field_get_items($entity_type, $entity, 'field_p_featured_video');
+
+  if (($style == 'image' || $style == 'both') && (!$images || !$images[0]['fid'])) {
+    $errors['field_p_featured_image'][LANGUAGE_NONE][0][] = [
+      'error' => 'field_example_invalid',
+      'message' => t('Image required.'),
+    ];
+  }
+
+  if (($style == 'video' || $style == 'both') && (!$videos || !array_filter($videos[0]))) {
+    $errors['field_p_featured_video'][LANGUAGE_NONE][0][] = [
       'error' => 'field_example_invalid',
       'message' => t('Video Required.'),
     ];
