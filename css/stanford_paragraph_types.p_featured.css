@@ -103,5 +103,5 @@
 }
 
 .entity-paragraphs-item iframe[src*="youtube"], .entity-paragraphs-item iframe[src*="vimeo"] {
-  height: 318px !important;
+  height: 350px !important;
 }
