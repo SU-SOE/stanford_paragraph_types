@@ -18,6 +18,10 @@
 }
 
 .paragraphs-item-p-featured > .content .field-name-field-p-featured-image {
+  position: absolute;
+}
+
+.paragraphs-item-p-featured > .content .field-name-field-p-featured-image {
   position: relative;
 }
 
@@ -96,4 +100,8 @@
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+.entity-paragraphs-item iframe[src*="youtube"], .entity-paragraphs-item iframe[src*="vimeo"] {
+  height: 318px !important;
 }

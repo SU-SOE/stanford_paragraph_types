@@ -18,6 +18,10 @@
     }
 
     .field-name-field-p-featured-image {
+      position: absolute;
+    }
+
+    .field-name-field-p-featured-image {
       position: relative;
 
       img {
@@ -102,4 +106,8 @@
       padding-left: 0;
     }
   }
+}
+
+.entity-paragraphs-item iframe[src*="youtube"], .entity-paragraphs-item iframe[src*="vimeo"] {
+  height: 318px !important;
 }
