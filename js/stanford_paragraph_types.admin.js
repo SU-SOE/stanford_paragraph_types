@@ -119,20 +119,19 @@
 
       function featuredCTAbutton($style, radioVal) {
         oFormObject = document.forms['bean-form'];
+        $('#field-featured-block-featured-und-0-field-p-featured-more-link-add-more-wrapper .link-attributes').hide();
 
         if (radioVal == 'yes') {
           document.getElementById("edit-field-featured-block-featured-und-0-field-p-featured-button-color-und-none").checked = true;
           oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].value = 'btn';
           oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].readOnly = true;
           $('.field-name-field-p-featured-button-color').show();
-          $('#field-featured-block-featured-und-0-field-p-featured-more-link-add-more-wrapper .link-attributes').show();
 
         }
         else if (radioVal == 'no') {
           oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].value = '';
           oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].readOnly = false;
           $('.field-name-field-p-featured-button-color').hide();
-          $('#field-featured-block-featured-und-0-field-p-featured-more-link-add-more-wrapper .link-attributes').hide();
         }
       }
 

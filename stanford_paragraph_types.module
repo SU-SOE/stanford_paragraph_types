@@ -183,10 +183,6 @@ function _stanford_paragraph_types_preprocess_entity_paragraphs_item(&$vars) {
 
       break;
 
-    case 'p_featured':
-
-      break;
-
     case 'p_callout':
       $color_items = field_get_items('paragraphs_item', $vars['paragraphs_item'], 'field_p_callout_color');
       if ($color_items) {
