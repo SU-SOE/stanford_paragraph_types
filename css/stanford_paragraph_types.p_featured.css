@@ -47,22 +47,6 @@
   line-height: 1.2em;
 }
 
-.paragraphs-item-p-featured.overlay-top .group-overlay-text {
-  top: 20px;
-}
-
-.paragraphs-item-p-featured.overlay-bottom .group-overlay-text {
-  bottom: 20px;
-}
-
-.paragraphs-item-p-featured.overlay-left .group-overlay-text {
-  left: 20px;
-}
-
-.paragraphs-item-p-featured.overlay-right .group-overlay-text {
-  right: 20px;
-}
-
 .paragraphs-item-p-featured a.play-video {
   display: block;
   position: absolute;

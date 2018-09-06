@@ -49,6 +49,32 @@
         });
       });
 
+      $('.field-name-field-p-featured-cta-button', context).each(function () {
+        $style = $(this);
+
+        $(this).find('.form-radio').each(function () {
+          if ($(this).is(':checked')) {
+            featuredCTAbutton($style, $(this).val());
+          }
+          $(this).change(function () {
+            featuredCTAbutton($style, $(this).val());
+          });
+        });
+      });
+
+      $('.field-name-field-p-featured-button-color', context).each(function () {
+        $style = $(this);
+
+        $(this).find('.form-radio').each(function () {
+          if ($(this).is(':checked')) {
+            featuredButtonColor($style, $(this).val());
+          }
+          $(this).change(function () {
+            featuredButtonColor($style, $(this).val());
+          });
+        });
+      });
+
       // Used this method vs conditional_fields since the contrib module failed
       // to function correctly after a 2nd item was added.
       function teaserCardsCTA(group, radioVal) {
@@ -78,15 +104,57 @@
 
       function featuredStyle($style, radioVal) {
         if (radioVal == 'image') {
-          $style.siblings('.field-name-field-p-featured-image').show();
-          $style.siblings('.field-name-field-p-featured-video').hide();
+          $('#edit-field-featured-block-featured-und-0-field-p-featured-image').show();
+          $('#edit-field-featured-block-featured-und-0-field-p-featured-video').hide();
         }
         else if (radioVal == 'video') {
-          $style.siblings('.field-name-field-p-featured-image').hide();
-          $style.siblings('.field-name-field-p-featured-video').show();
+          $('#edit-field-featured-block-featured-und-0-field-p-featured-image').hide();
+          $('#edit-field-featured-block-featured-und-0-field-p-featured-video').show();
         }
         else {
-          $style.siblings().show();
+          $('#edit-field-featured-block-featured-und-0-field-p-featured-image').show();
+          $('#edit-field-featured-block-featured-und-0-field-p-featured-video').show();
+        }
+      }
+
+      function featuredCTAbutton($style, radioVal) {
+        oFormObject = document.forms['bean-form'];
+
+        if (radioVal == 'yes') {
+          document.getElementById("edit-field-featured-block-featured-und-0-field-p-featured-button-color-und-none").checked = true;
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].value = 'btn';
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].readOnly = true;
+          $('.field-name-field-p-featured-button-color').show();
+          $('#field-featured-block-featured-und-0-field-p-featured-more-link-add-more-wrapper .link-attributes').show();
+
+        }
+        else if (radioVal == 'no') {
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].value = '';
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].readOnly = false;
+          $('.field-name-field-p-featured-button-color').hide();
+          $('#field-featured-block-featured-und-0-field-p-featured-more-link-add-more-wrapper .link-attributes').hide();
+        }
+      }
+
+      function featuredButtonColor($style, radioVal) {
+        oFormObject = document.forms['bean-form'];
+
+        if (radioVal == '_none') {
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].value = 'btn';
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].readOnly = true;
+
+        }
+        else if (radioVal == 'orange') {
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].value = 'btn-orange';
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].readOnly = true;
+        }
+        else if (radioVal == 'pink') {
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].value = 'btn-pink';
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].readOnly = true;
+        }
+        else if (radioVal == 'turquoise') {
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].value = 'btn-turquoise';
+          oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].readOnly = true;
         }
       }
 

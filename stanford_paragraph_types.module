@@ -184,20 +184,6 @@ function _stanford_paragraph_types_preprocess_entity_paragraphs_item(&$vars) {
       break;
 
     case 'p_featured':
-      // Adds class to tell where the overlay should live.
-      $classes = explode(' ', $entity->field_p_featured_alignment[LANGUAGE_NONE][0]['value']);
-      foreach ($classes as $class) {
-        $vars['classes_array'][] = $class;
-      }
-
-      // If the style is not "both" unset the unwanted field.
-      $style = $entity->field_p_featured_style[LANGUAGE_NONE][0]['value'];
-      if ($style == 'image') {
-        unset($vars['content']['field_p_featured_video']);
-      }
-      elseif ($style == 'video') {
-        unset($vars['content']['field_p_featured_image']);
-      }
 
       break;
 

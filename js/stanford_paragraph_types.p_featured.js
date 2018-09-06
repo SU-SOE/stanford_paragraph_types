@@ -28,7 +28,6 @@
               e.preventDefault();
               $dad = $(this).parent();
               $dad.hide();
-              //$dad.siblings('.group-overlay-text').hide();
               var iframe = $(video).find('iframe')[0];
 
               iframe.src += "&autoplay=1";
