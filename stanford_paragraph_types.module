@@ -183,6 +183,16 @@ function _stanford_paragraph_types_preprocess_entity_paragraphs_item(&$vars) {
 
       break;
 
+    case 'p_featured':
+      // If it has video, add has-video class.
+      $has_video = isset($entity->field_p_featured_video[LANGUAGE_NONE][0]['video_url']);
+
+      if ($has_video) {
+        $vars['classes_array'][] = 'has-video';
+      }
+
+      break;
+
     case 'p_callout':
       $color_items = field_get_items('paragraphs_item', $vars['paragraphs_item'], 'field_p_callout_color');
       if ($color_items) {
