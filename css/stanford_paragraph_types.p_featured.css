@@ -1,5 +1,6 @@
 .row-fluid .block-bean.well.no-padding {
   padding: 0;
+  display: inline-block;
 }
 
 .paragraphs-item-p-featured > .content {
@@ -22,15 +23,12 @@
 }
 
 .paragraphs-item-p-featured > .content .field-name-field-p-featured-image {
-  position: absolute;
-}
-
-.paragraphs-item-p-featured > .content .field-name-field-p-featured-image {
   position: relative;
 }
 
 .paragraphs-item-p-featured > .content .field-name-field-p-featured-image img {
   width: 100%;
+  max-height: 500px;
 }
 
 .paragraphs-item-p-featured .group-overlay-text {
