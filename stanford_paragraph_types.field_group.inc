@@ -470,6 +470,8 @@ function stanford_paragraph_types_field_group_info() {
       1 => 'field_p_featured_headline',
       2 => 'field_p_featured_description',
       3 => 'field_p_featured_more_link',
+      4 => 'field_p_featured_cta_button',
+      5 => 'field_p_featured_button_color',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
