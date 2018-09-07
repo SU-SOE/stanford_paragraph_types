@@ -27,14 +27,17 @@
             if (e.eventPhase == 3) {
               e.preventDefault();
               $dad = $(this).parent();
-              
-              $(video).css('position', 'absolute');
+
+              // Push the image overlay behind the video
               $dad.css('z-index', 1);
 
               var iframe = $(video).find('iframe')[0];
 
               iframe.src += "&autoplay=1";
               $(iframe).attr('onload', 'this.contentWindow.focus()');
+
+              // We need to change to absolute for correct style
+              $(video).css('position', 'absolute');
               $(video).show();
             }
 
