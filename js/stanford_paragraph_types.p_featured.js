@@ -27,7 +27,8 @@
             if (e.eventPhase == 3) {
               e.preventDefault();
               $dad = $(this).parent();
-              $dad.hide();
+              //$dad.hide();
+              $dad.css('z-index', 1);
               var iframe = $(video).find('iframe')[0];
 
               iframe.src += "&autoplay=1";

@@ -103,17 +103,24 @@
       }
 
       function featuredStyle($style, radioVal) {
+        oFormObject = document.forms['bean-form'];
+
         if (radioVal == 'image') {
           $('#edit-field-featured-block-featured-und-0-field-p-featured-image').show();
           $('#edit-field-featured-block-featured-und-0-field-p-featured-video').hide();
+          oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-video-und-0-video-url"].value = '';
         }
         else if (radioVal == 'video') {
           $('#edit-field-featured-block-featured-und-0-field-p-featured-image').hide();
+          oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-more-link-und-0-title"].value = '';
+          oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-more-link-und-0-url"].value = '';
           $('#edit-field-featured-block-featured-und-0-field-p-featured-video').show();
         }
         else {
           $('#edit-field-featured-block-featured-und-0-field-p-featured-image').show();
           $('#edit-field-featured-block-featured-und-0-field-p-featured-video').show();
+          oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-more-link-und-0-title"].value = '';
+          oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-more-link-und-0-url"].value = '';
         }
       }
 
