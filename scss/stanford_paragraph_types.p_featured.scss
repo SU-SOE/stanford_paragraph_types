@@ -22,14 +22,11 @@
     }
 
     .field-name-field-p-featured-image {
-      position: absolute;
-    }
-
-    .field-name-field-p-featured-image {
       position: relative;
 
       img {
         width: 100%;
+        min-height: 400px;
       }
     }
   }
