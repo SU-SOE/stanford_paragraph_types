@@ -1,5 +1,11 @@
-.row-fluid .block-bean.well.no-padding {
+.row-fluid .block-bean.well.featured-block {
   padding: 0;
+  display: inline-block;
+}
+
+.row-fluid .block-bean.well.featured-block.featured-video-no-image {
+  padding: 0;
+  display: block;
 }
 
 .paragraphs-item-p-featured > .content {
