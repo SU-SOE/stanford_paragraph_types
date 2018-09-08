@@ -114,6 +114,8 @@
           $('#edit-field-featured-block-featured-und-0-field-p-featured-image').hide();
           oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-more-link-und-0-title"].value = '';
           oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-more-link-und-0-url"].value = '';
+          // remove the image if video only.
+          $('#edit-field-featured-block-featured-und-0-field-p-featured-image-und-0-remove-button').trigger("mousedown");
           $('#edit-field-featured-block-featured-und-0-field-p-featured-video').show();
         }
         else {
