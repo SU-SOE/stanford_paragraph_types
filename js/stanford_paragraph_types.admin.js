@@ -37,40 +37,34 @@
       });
 
       $('.field-name-field-p-featured-style', context).each(function () {
-        $style = $(this);
-
         $(this).find('.form-radio').each(function () {
           if ($(this).is(':checked')) {
-            featuredStyle($style, $(this).val());
+            featuredStyle($(this).val());
           }
           $(this).change(function () {
-            featuredStyle($style, $(this).val());
+            featuredStyle($(this).val());
           });
         });
       });
 
       $('.field-name-field-p-featured-cta-button', context).each(function () {
-        $style = $(this);
-
         $(this).find('.form-radio').each(function () {
           if ($(this).is(':checked')) {
-            featuredCTAbutton($style, $(this).val());
+            featuredCTAbutton($(this).val());
           }
           $(this).change(function () {
-            featuredCTAbutton($style, $(this).val());
+            featuredCTAbutton($(this).val());
           });
         });
       });
 
       $('.field-name-field-p-featured-button-color', context).each(function () {
-        $style = $(this);
-
         $(this).find('.form-radio').each(function () {
           if ($(this).is(':checked')) {
-            featuredButtonColor($style, $(this).val());
+            featuredButtonColor($(this).val());
           }
           $(this).change(function () {
-            featuredButtonColor($style, $(this).val());
+            featuredButtonColor($(this).val());
           });
         });
       });
@@ -102,7 +96,7 @@
         }
       }
 
-      function featuredStyle($style, radioVal) {
+      function featuredStyle(radioVal) {
         oFormObject = document.forms['bean-form'];
 
         if (radioVal == 'image') {
@@ -126,7 +120,7 @@
         }
       }
 
-      function featuredCTAbutton($style, radioVal) {
+      function featuredCTAbutton(radioVal) {
         oFormObject = document.forms['bean-form'];
         $('#field-featured-block-featured-und-0-field-p-featured-more-link-add-more-wrapper .link-attributes').hide();
 
@@ -144,7 +138,7 @@
         }
       }
 
-      function featuredButtonColor($style, radioVal) {
+      function featuredButtonColor(radioVal) {
         oFormObject = document.forms['bean-form'];
 
         if (radioVal == '_none') {
