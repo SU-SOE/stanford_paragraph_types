@@ -8,9 +8,6 @@
     attach: function (context, settings) {
       $('.field-name-field-p-featured-image', context).each(function () {
         var video = $(this).siblings('.field-name-field-p-featured-video');
-        if ($(this).parents('.has-image').length) {
-          //alert($(this).parents('.has-image').length);
-        }
 
         if (video.length) {
           $(video).find('iframe').attr('title', Drupal.t('Video Player'));
