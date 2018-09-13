@@ -1,23 +1,34 @@
 @import 'colors';
 
 .paragraphs-item-p-cards {
-  .field-item .field-collection-view {
-    padding: 0 10px;
-  }
+  .field-name-field-p-cards-card {
 
-  .field-item:first-child .field-collection-view {
-    padding: 0 10px 0 0;
-  }
+    @media(min-width: 767px) {
+      > .field-items {
+        display: flex;
 
-  .field-item:last-child .field-collection-view {
-    padding: 0 0 0 10px;
+        > .field-item {
+          flex-grow: 1;
+          margin: 0 10px;
+          float: left;
+        }
+      }
+
+      // Old IE Fix.
+      &.items-3 > .field-items > .field-item {
+        width: 33%;
+      }
+
+      &.items-2 > .field-items > .field-item {
+        width: 33%;
+      }
+    }
   }
 
   img {
     margin: 0 auto;
     display: block;
   }
-
   @media (max-width: 767px) {
     .field-item .field-collection-view,
     .field-item:first-child .field-collection-view,
@@ -29,10 +40,6 @@
     .field-name-field-p-card-file,
     .field-name-field-p-card-text {
       padding: 0 1em;
-    }
-
-    .group-card-title {
-      padding: 0 0.6em;
     }
   }
 
@@ -106,7 +113,6 @@
       }
     }
   }
-
 
   .pattern-asfalt-dark .group-card-title {
     background-image: url('../img/asfalt-dark.png');

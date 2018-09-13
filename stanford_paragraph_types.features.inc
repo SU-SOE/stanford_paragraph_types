@@ -36,6 +36,11 @@ function stanford_paragraph_types_paragraphs_info() {
       'bundle' => 'p_cards',
       'locked' => '1',
     ),
+    'p_featured' => array(
+      'name' => 'Featured',
+      'bundle' => 'p_featured',
+      'locked' => '1',
+    ),
     'p_hero' => array(
       'name' => 'Hero',
       'bundle' => 'p_hero',

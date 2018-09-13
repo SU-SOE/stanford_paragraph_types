@@ -1,0 +1,100 @@
+.row-fluid .block-bean.well.featured-block {
+  display: inline-block;
+  padding: 0;
+}
+
+.row-fluid .block-bean.well.featured-block.featured-video-no-image {
+  display: block;
+  padding: 0;
+}
+
+.paragraphs-item-p-featured > .content {
+  position: relative;
+}
+
+.paragraphs-item-p-featured > .content .player {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
+}
+
+.paragraphs-item-p-featured > .content iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.paragraphs-item-p-featured > .content .field-name-field-p-featured-image {
+  position: relative;
+}
+
+.paragraphs-item-p-featured > .content .field-name-field-p-featured-image img {
+  max-height: 500px;
+  min-height: 340px;
+  width: 100%;
+}
+
+.paragraphs-item-p-featured .group-overlay-text {
+  background-color: #fff;
+  padding: 40px;
+  position: absolute;
+}
+
+.paragraphs-item-p-featured .group-overlay-text .field.field-name-field-p-featured-headline,
+.paragraphs-item-p-featured .group-overlay-text .field.field-name-field-p-featured-superhead {
+  margin-bottom: 0;
+}
+
+.paragraphs-item-p-featured .group-overlay-text .field-name-field-p-featured-superhead {
+  font-size: 2.4em;
+  font-weight: 400;
+  letter-spacing: -.5px;
+  line-height: 1.2em;
+}
+
+.paragraphs-item-p-featured a.play-video {
+  color: #fff;
+  display: block;
+  font-size: 0;
+  left: calc(50% - 70px);
+  position: absolute;
+  top: calc(50% - 70px);
+}
+
+.paragraphs-item-p-featured a.play-video:focus, .paragraphs-item-p-featured a.play-video:hover {
+  color: #b6b1a9;
+  text-decoration: none;
+}
+
+.paragraphs-item-p-featured a.play-video i:before {
+  font-size: 140px;
+}
+
+.paragraphs-item-p-featured .field-name-field-p-featured-video:nth-child(2) {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .paragraphs-item-p-featured .group-overlay-text {
+    position: static;
+  }
+}
+
+.style-custom-styles-dark .paragraphs-item-p-featured .group-overlay-text {
+  background: #2e2d29;
+}
+
+@media (max-width: 1169px) {
+  .paragraphs-item-p-featured.entity-paragraphs-item {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.entity-paragraphs-item iframe[src*="youtube"],
+.entity-paragraphs-item iframe[src*="vimeo"] {
+  height: 400px !important;
+}

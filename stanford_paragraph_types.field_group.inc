@@ -169,6 +169,36 @@ function stanford_paragraph_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_headline_h2|paragraphs_item|p_featured|default';
+  $field_group->group_name = 'group_headline_h2';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'p_featured';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_overlay_text';
+  $field_group->data = array(
+    'label' => 'Headline H2',
+    'weight' => '4',
+    'children' => array(
+      0 => 'field_p_featured_headline',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Headline H2',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-headline-h2 field-group-html-element',
+        'element' => 'h2',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_headline_h2|paragraphs_item|p_featured|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_headline_h2|paragraphs_item|p_hero|default';
   $field_group->group_name = 'group_headline_h2';
   $field_group->entity_type = 'paragraphs_item';
@@ -391,6 +421,75 @@ function stanford_paragraph_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_overlay_text|paragraphs_item|p_featured|default';
+  $field_group->group_name = 'group_overlay_text';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'p_featured';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Overlay Text',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_p_featured_superhead',
+      1 => 'field_p_featured_description',
+      2 => 'field_p_featured_more_link',
+      3 => 'group_headline_h2',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Overlay Text',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-overlay-text field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_overlay_text|paragraphs_item|p_featured|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_overlay_text|paragraphs_item|p_featured|form';
+  $field_group->group_name = 'group_overlay_text';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'p_featured';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Overlay Text',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_p_featured_superhead',
+      1 => 'field_p_featured_headline',
+      2 => 'field_p_featured_description',
+      3 => 'field_p_featured_more_link',
+      4 => 'field_p_featured_cta_button',
+      5 => 'field_p_featured_button_color',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Overlay Text',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-overlay-text field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups['group_overlay_text|paragraphs_item|p_featured|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_overlay_text|paragraphs_item|p_hero|default';
   $field_group->group_name = 'group_overlay_text';
   $field_group->entity_type = 'paragraphs_item';
@@ -607,6 +706,37 @@ function stanford_paragraph_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_p_featured|paragraphs_item|p_featured|form';
+  $field_group->group_name = 'group_p_featured';
+  $field_group->entity_type = 'paragraphs_item';
+  $field_group->bundle = 'p_featured';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Featured',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_p_featured_style',
+      1 => 'field_p_featured_image',
+      2 => 'field_p_featured_video',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'Featured',
+      'instance_settings' => array(
+        'required_fields' => 1,
+        'id' => '',
+        'classes' => 'group-p-featured field-group-fieldset',
+        'description' => '',
+      ),
+      'formatter' => 'collapsible',
+    ),
+  );
+  $field_groups['group_p_featured|paragraphs_item|p_featured|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_p_hero|paragraphs_item|p_hero|form';
   $field_group->group_name = 'group_p_hero';
   $field_group->entity_type = 'paragraphs_item';
@@ -703,6 +833,38 @@ function stanford_paragraph_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_p_icon_readmore|field_collection_item|field_p_icon_columns|stanford_list';
+  $field_group->group_name = 'group_p_icon_readmore';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_p_icon_columns';
+  $field_group->mode = 'stanford_list';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Read More',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_p_icon_links',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Read More',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'more-link',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_p_icon_readmore|field_collection_item|field_p_icon_columns|stanford_list'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_p_icon_title|field_collection_item|field_p_icon_columns|default';
   $field_group->group_name = 'group_p_icon_title';
   $field_group->entity_type = 'field_collection_item';
@@ -763,6 +925,36 @@ function stanford_paragraph_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_p_icon_title|field_collection_item|field_p_icon_columns|stanford_list';
+  $field_group->group_name = 'group_p_icon_title';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_p_icon_columns';
+  $field_group->mode = 'stanford_list';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Title',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_p_icon_title',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Title',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-p-icon-title field-group-html-element',
+        'element' => 'h2',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_p_icon_title|field_collection_item|field_p_icon_columns|stanford_list'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_p_icons|paragraphs_item|p_icon|form';
   $field_group->group_name = 'group_p_icons';
   $field_group->entity_type = 'paragraphs_item';
@@ -774,6 +966,7 @@ function stanford_paragraph_types_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'field_p_icon_columns',
+      1 => 'field_p_icons_per_row',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -788,6 +981,38 @@ function stanford_paragraph_types_field_group_info() {
     ),
   );
   $field_groups['group_p_icons|paragraphs_item|p_icon|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_p_icon|field_collection_item|field_p_icon_columns|form';
+  $field_group->group_name = 'group_p_icon';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_p_icon_columns';
+  $field_group->mode = 'form';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Icon',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_p_icon_color',
+      1 => 'field_p_icon_icon',
+      2 => 'field_p_icon_image',
+      3 => 'field_p_icon_icon_style',
+      4 => 'field_p_icon_text',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-p-icon field-group-fieldset',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_p_icon|field_collection_item|field_p_icon_columns|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -949,6 +1174,38 @@ function stanford_paragraph_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_read_more|field_collection_item|field_p_icon_columns|stanford_block';
+  $field_group->group_name = 'group_read_more';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_p_icon_columns';
+  $field_group->mode = 'stanford_block';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Read More',
+    'weight' => '3',
+    'children' => array(
+      0 => 'field_p_icon_links',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Read More',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'more-link',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_read_more|field_collection_item|field_p_icon_columns|stanford_block'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_right_column|paragraphs_item|p_wysiwyg|default';
   $field_group->group_name = 'group_right_column';
   $field_group->entity_type = 'paragraphs_item';
@@ -1014,6 +1271,36 @@ function stanford_paragraph_types_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_title|field_collection_item|field_p_icon_columns|stanford_block';
+  $field_group->group_name = 'group_title';
+  $field_group->entity_type = 'field_collection_item';
+  $field_group->bundle = 'field_p_icon_columns';
+  $field_group->mode = 'stanford_block';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Title',
+    'weight' => '2',
+    'children' => array(
+      0 => 'field_p_icon_title',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Title',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-title field-group-html-element',
+        'element' => 'h2',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_title|field_collection_item|field_p_icon_columns|stanford_block'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_wysiwyg_title|paragraphs_item|p_wysiwyg|default';
   $field_group->group_name = 'group_wysiwyg_title';
   $field_group->entity_type = 'paragraphs_item';
@@ -1050,10 +1337,12 @@ function stanford_paragraph_types_field_group_info() {
   t('Callout Text');
   t('Caption');
   t('Card Title');
+  t('Featured');
   t('Featured Image');
   t('Header H2');
   t('Headline H2');
   t('Hero');
+  t('Icon');
   t('Icons');
   t('Left Column');
   t('Main');
