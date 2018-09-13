@@ -5,7 +5,7 @@ Stanford Paragraph Types
 -------------------------------
 - added js for the Featured Block bean type.
 - added paragraph type for Featured Block.
- 
+
 7.x-1.4              2018-06-26
 -------------------------------
 - added a little padding for mobile display
