@@ -100,11 +100,13 @@
         oFormObject = document.forms['bean-form'];
 
         if (radioVal == 'image') {
+          // We hide the video if it is image only.
           $('#edit-field-featured-block-featured-und-0-field-p-featured-image').show();
           $('#edit-field-featured-block-featured-und-0-field-p-featured-video').hide();
           oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-video-und-0-video-url"].value = '';
         }
         else if (radioVal == 'video') {
+          // We hide the image if it is video only.
           $('#edit-field-featured-block-featured-und-0-field-p-featured-image').hide();
           oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-more-link-und-0-title"].value = '';
           oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-more-link-und-0-url"].value = '';
@@ -113,6 +115,7 @@
           $('#edit-field-featured-block-featured-und-0-field-p-featured-video').show();
         }
         else {
+          // Otherwise show both image and video.
           $('#edit-field-featured-block-featured-und-0-field-p-featured-image').show();
           $('#edit-field-featured-block-featured-und-0-field-p-featured-video').show();
           oFormObject.elements["edit-field-featured-block-featured-und-0-field-p-featured-more-link-und-0-title"].value = '';
@@ -122,8 +125,11 @@
 
       function featuredCTAbutton(radioVal) {
         oFormObject = document.forms['bean-form'];
+
+        // Don't show the link attribute class field.
         $('#field-featured-block-featured-und-0-field-p-featured-more-link-add-more-wrapper .link-attributes').hide();
 
+        // CTA Button or no cta button, that is the question.
         if (radioVal == 'yes') {
           document.getElementById("edit-field-featured-block-featured-und-0-field-p-featured-button-color-und-none").checked = true;
           oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].value = 'btn';
@@ -140,7 +146,7 @@
 
       function featuredButtonColor(radioVal) {
         oFormObject = document.forms['bean-form'];
-
+        // We change the class depending on which color button.
         if (radioVal == '_none') {
           oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].value = 'btn';
           oFormObject.elements["field_featured_block_featured[und][0][field_p_featured_more_link][und][0][attributes][class]"].readOnly = true;

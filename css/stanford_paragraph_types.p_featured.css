@@ -1,11 +1,11 @@
 .row-fluid .block-bean.well.featured-block {
-  padding: 0;
   display: inline-block;
+  padding: 0;
 }
 
 .row-fluid .block-bean.well.featured-block.featured-video-no-image {
-  padding: 0;
   display: block;
+  padding: 0;
 }
 
 .paragraphs-item-p-featured > .content {
@@ -13,18 +13,18 @@
 }
 
 .paragraphs-item-p-featured > .content .player {
-  position: relative;
-  width: 100%;
   height: 0;
   padding-bottom: 56.25%;
+  position: relative;
+  width: 100%;
 }
 
 .paragraphs-item-p-featured > .content iframe {
+  height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
 }
 
 .paragraphs-item-p-featured > .content .field-name-field-p-featured-image {
@@ -32,15 +32,15 @@
 }
 
 .paragraphs-item-p-featured > .content .field-name-field-p-featured-image img {
-  width: 100%;
   max-height: 500px;
   min-height: 340px;
+  width: 100%;
 }
 
 .paragraphs-item-p-featured .group-overlay-text {
-  position: absolute;
   background-color: #fff;
   padding: 40px;
+  position: absolute;
 }
 
 .paragraphs-item-p-featured .group-overlay-text .field.field-name-field-p-featured-headline,
@@ -56,12 +56,12 @@
 }
 
 .paragraphs-item-p-featured a.play-video {
+  color: #fff;
   display: block;
-  position: absolute;
   font-size: 0;
   left: calc(50% - 70px);
+  position: absolute;
   top: calc(50% - 70px);
-  color: #fff;
 }
 
 .paragraphs-item-p-featured a.play-video:focus, .paragraphs-item-p-featured a.play-video:hover {
@@ -89,8 +89,8 @@
 
 @media (max-width: 1169px) {
   .paragraphs-item-p-featured.entity-paragraphs-item {
-    padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
   }
 }
 

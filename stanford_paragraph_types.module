@@ -184,14 +184,16 @@ function _stanford_paragraph_types_preprocess_entity_paragraphs_item(&$vars) {
       break;
 
     case 'p_featured':
-      // If it has video, add has-video class.
+      // Check for a video URL.
       $has_video = !empty($entity->field_p_featured_video[LANGUAGE_NONE][0]['video_url']);
+      // Check for an image file.
       $has_image = !empty($entity->field_p_featured_image[LANGUAGE_NONE][0]['filename']);
 
+      // If it has video, add has-video class.
       if ($has_video) {
         $vars['classes_array'][] = 'has-video';
       }
-
+      // If it has video, add has-image class.
       if ($has_image) {
         $vars['classes_array'][] = 'has-image';
       }
