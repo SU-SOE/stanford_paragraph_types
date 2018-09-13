@@ -94,6 +94,7 @@
   }
 }
 
-.entity-paragraphs-item iframe[src*="youtube"], .entity-paragraphs-item iframe[src*="vimeo"] {
+.entity-paragraphs-item iframe[src*="youtube"],
+.entity-paragraphs-item iframe[src*="vimeo"] {
   height: 400px !important;
 }
