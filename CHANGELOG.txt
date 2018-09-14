@@ -1,7 +1,7 @@
 Stanford Paragraph Types
 -------------------------------
 
-7.x-1.5              2018-09-13
+7.x-1.5-alpha1       2018-09-13
 -------------------------------
 - added js for the Featured Block bean type.
 - added paragraph type for Featured Block.
