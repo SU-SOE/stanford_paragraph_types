@@ -48,6 +48,10 @@
   margin-bottom: 0;
 }
 
+.paragraphs-item-p-featured .group-overlay-text .field.field-name-field-p-featured-superhead {
+  letter-spacing: 0;
+}
+
 .paragraphs-item-p-featured .group-overlay-text .field-name-field-p-featured-superhead {
   font-size: 2.4em;
   font-weight: 400;
