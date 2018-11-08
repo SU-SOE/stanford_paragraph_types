@@ -119,7 +119,6 @@
             // Dad is the featured image.
             $dad = $(this).parent();
             $dad.hide();
-            $dad.siblings('.group-overlay-text').hide();
 
             // Show and play the video.
             $fieldWrapper.show();
