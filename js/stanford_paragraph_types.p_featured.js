@@ -4,7 +4,7 @@
  */
 
 (function ($) {
-  Drupal.behaviors.stanfordParagraphPHero = {
+  Drupal.behaviors.stanfordParagraphPFeatured = {
 
     attach: function (context, settings) {
 
@@ -24,7 +24,7 @@
       // If there is a vimeo video add the player api script.
       if ($('.field-name-field-p-featured-video iframe[src*="vimeo"]', context).length) {
         $.getScript('https://player.vimeo.com/api/player.js', function () {
-          Drupal.behaviors.stanfordParagraphPHero.vimeoReady();
+          Drupal.behaviors.stanfordParagraphPFeatured.vimeoReady();
         });
       }
     },
@@ -72,7 +72,7 @@
         $fieldWrapper = $(event.target.a.closest('.field-name-field-p-featured-video'));
         $imageOverlay = $fieldWrapper.siblings('.field-name-field-p-featured-image');
 
-        var $play = Drupal.behaviors.stanfordParagraphPHero.getPlayerButton(event.target.getVideoUrl());
+        var $play = Drupal.behaviors.stanfordParagraphPFeatured.getPlayerButton(event.target.getVideoUrl());
 
         // Add a click event to hide the featured image and play the video.
         $play.click(function (e) {
@@ -107,7 +107,7 @@
         $fieldWrapper = $($(iframe).closest('.field-name-field-p-featured-video'));
         $imageOverlay = $fieldWrapper.siblings('.field-name-field-p-featured-image');
 
-        var $play = Drupal.behaviors.stanfordParagraphPHero.getPlayerButton($(iframe).attr('src'));
+        var $play = Drupal.behaviors.stanfordParagraphPFeatured.getPlayerButton($(iframe).attr('src'));
 
         $play.click(function (e) {
           // Mouse has eventPhase 3, keyboard has 2. we only add the mouse
@@ -119,6 +119,7 @@
             // Dad is the featured image.
             $dad = $(this).parent();
             $dad.hide();
+            $dad.siblings('.group-overlay-text').hide();
 
             // Show and play the video.
             $fieldWrapper.show();
@@ -160,5 +161,5 @@
  */
 function onYouTubeIframeAPIReady() {
   // After Youtube API is loaded, we can do what we need.
-  Drupal.behaviors.stanfordParagraphPHero.youTubeReady();
+  Drupal.behaviors.stanfordParagraphPFeatured.youTubeReady();
 }
