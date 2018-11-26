@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+.paragraphs-item-p-featured.has-image.has-video .field-name-field-p-featured-video {
+  display: none;
+}
+
 .paragraphs-item-p-featured > .content {
   position: relative;
 }
@@ -75,10 +79,6 @@
 
 .paragraphs-item-p-featured a.play-video i:before {
   font-size: 140px;
-}
-
-.paragraphs-item-p-featured .field-name-field-p-featured-video:nth-child(2) {
-  display: none;
 }
 
 @media (max-width: 767px) {

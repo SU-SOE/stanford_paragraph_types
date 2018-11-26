@@ -9,6 +9,13 @@
 }
 
 .paragraphs-item-p-featured {
+
+  &.has-image.has-video {
+    .field-name-field-p-featured-video {
+      display: none;
+    }
+  }
+
   > .content {
     position: relative;
 
@@ -77,10 +84,6 @@
     i:before {
       font-size: 140px;
     }
-  }
-
-  .field-name-field-p-featured-video:nth-child(2) {
-    display: none;
   }
 
   @media (max-width: 767px) {
