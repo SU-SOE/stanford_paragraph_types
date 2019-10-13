@@ -94,21 +94,23 @@
      */
     onYoutubePlayerReady: function (event) {
 
-      $fieldWrapper = $(event.target.a.closest('.field-name-field-p-featured-video'));
-      $imageOverlay = $fieldWrapper.siblings('.field-name-field-p-featured-image');
+      var $fieldWrapper = $(event.target.a.closest('.field-name-field-p-featured-video'));
+      var $imageOverlay = $fieldWrapper.siblings('.field-name-field-p-featured-image');
 
       var $play = Drupal.behaviors.stanfordParagraphPFeatured.getPlayerButton(event.target.getVideoUrl());
       // Add a click event to hide the featured image and play the video.
       $play.click(function (e) {
+
         // Mouse has eventPhase 3, keyboard has 2. we only add the mouse
         // event so that a keyboard will navigate the user to the respective
         // YouTube page.
         if (e.eventPhase == 3) {
           e.preventDefault();
 
-          // Dad is the featured image.
-          $dad = $(this).parent();
-          $dad.hide();
+          // heroImage is the featured image.
+          var $heroImage = $(this).parent();
+          $heroImage.hide();
+          $heroImage.siblings('.group-overlay-text').hide();
 
           // Play and show the video.
           $fieldWrapper.show();
