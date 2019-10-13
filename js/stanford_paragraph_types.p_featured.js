@@ -110,7 +110,7 @@
           // heroImage is the featured image.
           var $heroImage = $(this).parent();
           $heroImage.hide();
-          $heroImage.siblings('.group-overlay-text').hide();
+          //$heroImage.siblings('.group-overlay-text').hide();
 
           // Play and show the video.
           $fieldWrapper.show();
