@@ -1,6 +1,10 @@
 Stanford Paragraph Types
 -------------------------------
 
+7.x-1.5-alpha3       2019-10-16
+-------------------------------
+- Modified stanford_paragraph_types.p_featured.js to work with multiple videos.
+
 7.x-1.5-alpha2       2018-11-27
 -------------------------------
 - Fixed the featured image/video block with css/js fixin for Firefox and IE 11.
